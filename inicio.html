@@ -92,7 +92,158 @@
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Arima+Madurai:wght@100&family=Arizonia&family=Cinzel&family=Cinzel+Decorative&family=Cormorant+Garamond:wght@500&family=Dancing+Script&family=EB+Garamond&family=Great+Vibes&family=Livvic:wght@100&family=Noto+Sans+Tagbanwa&family=Noto+Serif+Khojki:wght@700&family=Open+Sans:wght@300&family=Pacifico&family=Pinyon+Script&family=Tangerine&family=Tiro+Kannada&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+<script>
+    document.addEventListener("DOMContentLoaded", (event) => {
+  const controlBtn = document.getElementById("play-pause");
+  let track = document.getElementById("track"),
+    duration = track.duration, // Duration of audio clip (NaN here as the track is not loaded)
+    playhead = document.getElementById("playhead"), // playhead
+    timeline = document.getElementById("timeline"), // timeline
+    timelineWidth = timeline.offsetWidth - playhead.offsetWidth,
+    source = controlBtn.getAttribute("data-audio"),
+    leftTimer = document.getElementById("is-left"),
+    rightTimer = document.getElementById("is-right");
 
+  if (!track) return;
+
+  // Update the track duration when the track is loaded.
+  track.addEventListener(
+    "canplaythrough",
+    function () {
+      duration = track.duration;
+    },
+    false
+  );
+
+  function playPause() {
+    null === track.getAttribute("src") ? track.setAttribute("src", source) : "";
+
+    if (track.paused) {
+      track.play();
+      controlBtn.className = "pause";
+    } else {
+      track.pause();
+      controlBtn.className = "play";
+    }
+  }
+
+  controlBtn.addEventListener("click", playPause);
+
+  track.addEventListener("ended", function () {
+    controlBtn.className = "play";
+    track.currentTime = 0; // reset the playhead
+  });
+
+  // timeupdate event listener
+  track.addEventListener("timeupdate", timeUpdate, false);
+
+  // makes timeline clickable
+  timeline.addEventListener(
+    "click",
+    function (event) {
+      moveplayhead(event);
+      track.currentTime = duration * clickPercent(event);
+    },
+    false
+  );
+
+  // Moves playhead as user clicks
+  function moveplayhead(event) {
+    let newMargLeft = event.clientX - getPosition(timeline);
+
+    if (newMargLeft >= 0 && newMargLeft <= timelineWidth) {
+      playhead.style.marginLeft = newMargLeft + "px";
+    }
+    if (newMargLeft < 0) {
+      playhead.style.marginLeft = "0px";
+    }
+    if (newMargLeft > timelineWidth) {
+      playhead.style.marginLeft = timelineWidth + "px";
+    }
+  }
+
+  function getPosition(el) {
+    return el.getBoundingClientRect().left;
+  }
+
+  // returns decimal number of the total timelineWidth
+  function clickPercent(event) {
+    return (event.clientX - getPosition(timeline)) / timelineWidth;
+  }
+
+  // Time update
+  function timeUpdate() {
+    let playPercent = timelineWidth * (track.currentTime / duration);
+    playhead.style.marginLeft = playPercent + "px";
+    scrub.style.width = playPercent + "px";
+
+    // Current time
+    document.getElementById("duration-time").innerHTML = formatSecondsAsTime(
+      duration
+    );
+    document.getElementById("current-time").innerHTML = formatSecondsAsTime(
+      Math.floor(track.currentTime)
+    );
+  }
+
+  // Synchronizes playhead position with current point in audio
+  function formatSecondsAsTime(secs, format) {
+    let hr = Math.floor(secs / 3600);
+    let min = Math.floor((secs - hr * 3600) / 60);
+    let sec = Math.floor(secs - hr * 3600 - min * 60);
+
+    if (min < 10) {
+      min = "0" + min;
+    }
+    if (sec < 10) {
+      sec = "0" + sec;
+    }
+
+    return min + ":" + sec;
+  }
+
+  /**
+   * Progress Locator
+   */
+
+  function hmsToSecondsOnly(str) {
+    var p = str.split(":"),
+      s = 0,
+      m = 1;
+
+    while (p.length > 0) {
+      s += m * parseInt(p.pop(), 10);
+      m *= 60;
+    }
+
+    return s;
+  }
+
+  function moveToDuration() {
+    let searchLink = document.querySelectorAll(".search-duration");
+    let audio = document.querySelector("#track");
+
+    if (searchLink.length > 0) {
+      searchLink.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          if (audio) {
+            let currentTime = audio.currentTime;
+            if (currentTime == 0) {
+              playPause();
+            }
+
+            let seekTime = hmsToSecondsOnly(link.textContent);
+            audio.currentTime = seekTime;
+          }
+        });
+      });
+    }
+  }
+  moveToDuration();
+});
+
+</script>
     <title>Aaron Acoltzi | ¡MIS XVS!</title>
     <link rel="shortcut icon" href="img/CODIGO LOGOTIPO.png"/>
 </head>
@@ -117,9 +268,40 @@
 
     <div class="row justify-content-center mt-0" style="  margin: 0 auto;">
         
-                         <audio controls  volume="100" class="playpause ml-0 mb-0 mt-0 col-11 col-md-4 text-center"> 
-                    <source src="musica/musica.mp3" type="audio/mpeg">
+                         <div class="player-with-search">
+  <audio id="track">
+    <source src="" type="audio/mpeg" />
+  </audio>
+
+  <div class="" id="player-container">
+    
+    <div id="play-pause" class="play" data-audio="musica/musica.mp3">Play</div>
+    <div class="item-inner">
+      <div id="time-bar">
+        <div id="time-holder">
+          <div id="is-left">
+            <span id="current-time">
+              00:00
+            </span>
+            <div id="timeline" data-ol-has-click-handler="">
+      <div id="scrub"></div>
+      <div id="playhead"></div>
+    </div>
+          </div>
+
+          <div id="is-right">
+            <span id="duration-time">
+              <span class="duration-minutes" data-duration-minutes="true">0</span>:<span class="duration-minutes" data-duration-seconds="true">00</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
             </audio>
+        </div>
             <h4 class='nuestraBoda col-11 col-md-12 text-center mt-3'>¡MIS XV AÑOS! </h4>
            
                         
@@ -471,7 +653,7 @@
 
     <form class="form-register col-11 mt-4 col-md-8" name="submit-form" id="form-register">
         <h2 class="formulario col-12 col-lg-12 mt-2 text-left" style="color:#1b1a1f;   font-family: 'Josefin Sans', sans-serif;"><b>Nombre completo del invitado</b></h2>
-        <input class="controls" type="text" name="Nombres" id="nombres" placeholder="" required>
+        <input class="controls" type="text" name="Nombres" id="nombres" placeholder="" required style="color:#1b1a1f;">
         <!--<h2 class="formulario col-12 col-lg-12 mt-2 text-left" style="color:#1b1a1f;   font-family: 'Josefin Sans', sans-serif;"><b>Teléfono</b></h2>
         <input class="controls" type="number" name="Telefono" id="telefono" placeholder="" required>-->
         <h2 class="formulario col-12 col-lg-12 mt-2 text-left" style="color:#1b1a1f;   font-family: 'Josefin Sans', sans-serif;"><b>¿Podrás asistir? Selecciona una opción</b></h2>
@@ -490,13 +672,13 @@
         </select>-->
     
         <h2 class="formulario col-12 col-lg-12 mt-4 text-left"  style="color:#1b1a1f;   font-family: 'Josefin Sans', sans-serif;"><b>Mensaje para el quinceañero</b></h2>
-        <textarea class="controls" type="text"  style="widht: 100%; height: 100px" name="Mensaje" id="mensaje" placeholder="" required></textarea>
+        <textarea class="controls" type="text"  style="widht: 100%; height: 100px; color:#1b1a1f;  " name="Mensaje" id="mensaje" placeholder="" required></textarea>
 
         <div class="row justify-content-center">
             <button type="submit" class="btnForm col-8 mb-5 mt-3 text-center" id="botonForm" onclick="bloquear();"><i class="fas fa-envelope mr-2"></i> ENVIAR</button> 
         </div>
         <div class="row justify-content-center">
-        <div id="loading" class="spinner-border ml-2" role="status" style="display: none; margin-top: -40px; color:#091921">
+        <div id="loading" class="spinner-border ml-2" role="status" style="display: none; margin-top: -40px; color:#1b1a1f">
                 <span class="sr-only">Loading...</span>
         </div></div>
         
@@ -504,7 +686,7 @@
        
     </form> 
     <div class="row justify-content-center" id="respuestaEnviada">
-        <h2 class=" col-12 col-lg-12 mt-5 text-center" style="font-size: 22px; color:#fff;  font-family: 'Josefin Sans', sans-serif;"><i class="fa fa-check mr-2"></i>Respuesta enviada</b></h2>
+        <h2 class=" col-12 col-lg-12 mt-5 text-center" style="font-size: 22px; color:#fff;  font-family: 'Josefin Sans', sans-serif;"><i class="fa fa-check mr-2"></i>Respuesta enviada<br>Gracias por tu confirmación.</b></h2>
        </div>
        <div class="row justify-content-center" style="margin:0 auto;">
       <!-- <h2 class="respetuosamente col-11 col-md-6 mt-5 text-center" style="font-size: 17px; color:#FFF; font-family: 'Josefin Sans', sans-serif; ">Respetuosamente te pedimos no invitar a personas que no son parte de los boletos asignados ¡Gracias!</h2>-->
@@ -513,7 +695,7 @@
 
     <p class='textoasistencia col-12 col-lg-12 mb-4 mt-4 text-center' style="font-size: 17px; color:#fff;  font-family: 'Josefin Sans', sans-serif;"><b>¿Dudas sobre nuestro evento? Puedes pedir información a través de nuestro chat de WhatsApp.</b><p> 
     <div class=" logos1 row justify-content-center align-items-center mb-5"> 
-        <a  href="https://wa.me//526182916785?text=Confirmo%20mi%20asistencia." class="btnWhats text-center align-items-center col-6" style=""><b><i class="fa fa-whatsapp "></b></i> WhatsApp</a> 
+        <a  href="https://wa.me//526182916785?text=¡Hola!%20Tengo%20una%20duda%20sobre%20el%20evento.&#128513" class="btnWhats text-center align-items-center col-6" style=""><b><i class="fa fa-whatsapp "></b></i> WhatsApp</a> 
     </div>  <br>
      <h4 class='dondeyCuando col-12 col-lg-12 text-center'><b>¡NO FALTES!</b></h4> <br><br> 
 
@@ -672,7 +854,7 @@
  
     document.getElementById("respuestaEnviada").style.display = "none";
          let comprobar = "1";
-        let scriptURL = '';
+        let scriptURL = 'https://script.google.com/macros/s/AKfycbxmtdQwL4dyoBWhTJC7ssCIV1SFudX5oZ_7qyhe6Pan3UHamfXgzPNogW8EC9EM2GCM/exec';
         let form = document.forms['submit-form'];
  
         form.addEventListener('submit', e => {

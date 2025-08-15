@@ -1854,3 +1854,107 @@ img.hover-shadow {
 .hover-shadow:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+
+
+.player-with-search,
+#player-container {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+#player-container {
+  position: relative;
+  width: 300px;
+  overflow: hidden;
+  min-height: 40px;
+  background-color: #1b1a1f;
+  color: white;
+}
+
+#player-container #play-pause {
+  cursor: pointer;
+  text-indent: -999999px;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  float: left;
+  padding: 12px 18px;
+  z-index: 2;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMiAyNHYtMjRsMjAgMTItMjAgMTJ6Ii8+PC9zdmc+);
+  background-repeat: no-repeat !important;
+  background-position: center;
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
+  background-color: #8d6b2f;
+
+}
+
+.play {
+  
+}
+
+.pause {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTAgMjRoLTZ2LTI0aDZ2MjR6bTEwLTI0aC02djI0aDZ2LTI0eiIvPjwvc3ZnPg==) !important;
+}
+
+#timeline {
+  width: 100%;
+  height: 8px;
+  background: #1b1a1f;
+  float: left;
+  z-index: 9;
+  position: absolute;
+}
+
+#scrub {
+  height: 5px;
+  background-color: #FFF;
+  border: none;
+  color: hsl(44, 100%, 44%);
+  float: left;
+  
+}
+
+#playhead {
+  width: 5px;
+  height: 5px;
+  background: #8d6b2f;
+}
+
+.item-inner {
+  display: block;
+  float: left;
+  padding-left: 15px;
+  padding-top: 10px;
+  padding-bottom: 9px;
+  -ms-flex-item-align: stretch;
+  -webkit-align-self: stretch;
+  align-self: stretch;
+}
+#time-holder {
+  font-size: 12px;
+  margin-top: 0px;
+}
+div#is-right,
+div#is-left {
+  display: inline;
+  bottom: auto;
+  padding: 3px 7px;
+  padding-left: 0;
+}
+.progress-locator ul {
+  list-style-type: none;
+  counter-reset: css-counter 0; /* initializes counter to 0; use -1 for zero-based numbering */
+}
+.progress-locator li {
+  counter-increment: css-counter 1; /* Increase the counter by 1. */
+  display: flex;
+  gap: 9px;
+}
+.progress-locator li:before {
+  content: counter(css-counter) ". "; /* Apply counter before children's content. */
+}
+
+
