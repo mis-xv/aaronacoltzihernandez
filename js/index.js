@@ -457,38 +457,240 @@ $(document).ready(function(){
 	});
 
 
-
+$(document).ready(function () {
+ 
+    (function ($) {
+ 
+        $('#filtrar').keyup(function () {
+ 
+             var rex = new RegExp($(this).val(), 'i');
+ 
+             $('.buscar  li').hide();
+ 
+             $('.buscar  li').filter(function () {
+               return rex.test($(this).text());
+             }).show();
+ 
+        })
+ 
+    }(jQuery));
+ 
+});
 	
 });
-function personas1() {
-    window.open("pases/inicio1.html", "_self");        
+
+function confirmaciones() {
+    window.open("https://docs.google.com/spreadsheets/d/1Gk72JcIjneICCjExACeGCRmEYR-643T5iazO-jOuOVs/edit?usp=drive_link");        
 }
-function personas2() {
-    window.open("pases/inicio2.html", "_self");        
+function OviedoNajera() {
+    window.open("pases/OviedoNajera.html", "_self");        
 }
-function personas3() {
-    window.open("pases/inicio3.html", "_self");        
+function HernandezGomez() {
+    window.open("pases/HernandezGomez.html", "_self");        
 }
-function personas4() {
-    window.open("pases/inicio4.html", "_self");        
+function SantanaHernandez() {
+    window.open("pases/SantanaHernandez.html", "_self");        
 }
-function personas5() {
-    window.open("pases/inicio5.html", "_self");        
+function ValenzuelaHernandez() {
+    window.open("pases/ValenzuelaHernandez.html", "_self");        
 }
-function personas6() {
-    window.open("pases/inicio6.html", "_self");        
+function HernandezValles() {
+    window.open("pases/HernandezValles.html", "_self");        
 }
-function personas7() {
-    window.open("pases/inicio7.html", "_self");        
+function AguilarParedes() {
+    window.open("pases/AguilarParedes.html", "_self");        
 }
-function personas8() {
-    window.open("pases/inicio8.html", "_self");        
+function ParedesSaucedo() {
+    window.open("pases/ParedesSaucedo.html", "_self");        
 }
-function personas9() {
-    window.open("pases/inicio9.html", "_self");        
+function ArceOntiveros() {
+    window.open("pases/ArceOntiveros.html", "_self");        
+}
+function QuinterosOntiveros() {
+    window.open("pases/QuinterosOntiveros.html", "_self");        
 }
 
- function copiar1(){
+function CarrascoHernandez() {
+    window.open("pases/CarrascoHernandez.html", "_self");        
+}
+function EscobedoNevarez() {
+    window.open("pases/EscobedoNevarez.html", "_self");        
+}
+/////////////////////////////////////////////////////////
+function EnriqueDiaz() {
+    window.open("pases/EnriqueDiaz.html", "_self");        
+}
+function LozanoHernandez() {
+    window.open("pases/LozanoHernandez.html", "_self");        
+}
+function HernandezPerez() {
+    window.open("pases/HernandezPerez.html", "_self");        
+}
+function NevarezReyes() {
+    window.open("pases/NevarezReyes.html", "_self");        
+}
+function GonzalezBailon() {
+    window.open("pases/GonzalezBailon.html", "_self");        
+}
+function BailonPanuco() {
+    window.open("pases/BailonPanuco.html", "_self");        
+}
+function GarciaHernandez() {
+    window.open("pases/GarciaHernandez.html", "_self");        
+}
+
+function CastroBeltran() {
+    window.open("pases/CastroBeltran.html", "_self");        
+}
+function RosalesEstrada() {
+    window.open("pases/RosalesEstrada.html", "_self");        
+}
+function AndradeArroyo() {
+    window.open("pases/AndradeArroyo.html", "_self");        
+}
+function SanchezCordova() {
+    window.open("pases/SanchezCordova.html", "_self");        
+}
+//////////////////////////////////////////////////////////7
+function ArroyoPinedo() {
+    window.open("pases/ArroyoPinedo.html", "_self");        
+}
+function ArroyoVenegas() {
+    window.open("pases/ArroyoVenegas.html", "_self");        
+}
+function ArroyoGomez() {
+    window.open("pases/ArroyoGomez.html", "_self");        
+}
+function MaciasBeltran() {
+    window.open("pases/MaciasBeltran.html", "_self");        
+}
+function MoralesTapia() {
+    window.open("pases/MoralesTapia.html", "_self");        
+}
+
+function ArreolaHuerta() {
+    window.open("pases/ArreolaHuerta.html", "_self");        
+}
+function CordovaGuevara() {
+    window.open("pases/CordovaGuevara.html", "_self");        
+}
+function GonzalezHernandez() {
+    window.open("pases/GonzalezHernandez.html", "_self");        
+}
+function GonzalezRojas() {
+    window.open("pases/GonzalezRojas.html", "_self");        
+}
+function GonzalezSoriano() {
+     window.open("pases/GonzalezSoriano.html", "_self");          
+}
+function RubioEspino() {
+    window.open("pases/RubioEspino.html", "_self");   
+}
+//////////////////////////////////////////////////////////////
+function AndradeOrtega() {
+    window.open("pases/AndradeOrtega.html", "_self");        
+}
+function ValdezHernandez() {
+    window.open("pases/ValdezHernandez.html", "_self");        
+}
+function Graciano() {
+    window.open("pases/Graciano.html", "_self");        
+}
+function AndradeTorres() {
+    window.open("pases/AndradeTorres.html", "_self");        
+}
+function JaraAcoltzi() {
+    window.open("pases/JaraAcoltzi.html", "_self");        
+}
+function HerreraChaires() {
+    window.open("pases/HerreraChaires.html", "_self");        
+}
+function SandraGomez() {
+    window.open("pases/SandraGomez.html", "_self");        
+}
+function RodriguezChaires() {
+    window.open("pases/RodriguezChaires.html", "_self");        
+}
+function ChairezLares() {
+    window.open("pases/ChairezLares.html", "_self");        
+}
+
+function ChairezAvila() {
+    window.open("pases/ChairezAvila.html", "_self");        
+}
+function AndradeTorres4() {
+    window.open("pases/AndradeTorres4.html", "_self");        
+}
+////////////////////////////////////////////////////////////////////
+function RuizChaires() {
+    window.open("pases/RuizChaires.html", "_self");        
+}
+function AcoltziAcevedo() {
+    window.open("pases/AcoltziAcevedo.html", "_self");        
+}
+function AndradeCampos() {
+    window.open("pases/AndradeCampos.html", "_self");        
+}
+function ReyesAndrade() {
+    window.open("pases/ReyesAndrade.html", "_self");        
+}
+function AndradeTorres3() {
+    window.open("pases/AndradeTorres3.html", "_self");        
+}
+function HernandezAndrade() {
+    window.open("pases/HernandezAndrade.html", "_self");        
+}
+function AcoltziGarcia() {
+    window.open("pases/AcoltziGarcia.html", "_self");        
+}
+
+function AcoltziHuerta () {
+    window.open("pases/AcoltziHuerta.html", "_self");        
+}
+function TorresAlmeida() {
+    window.open("pases/TorresAlmeida.html", "_self");        
+}
+function BautistaSalas() {
+    window.open("pases/BautistaSalas.html", "_self");        
+}
+function ValdesHuerta() {
+    window.open("pases/ValdesHuerta.html", "_self");        
+}
+////////////////////////////////////////////////////////////////////////////
+function RodriguezSilerio() {
+    window.open("pases/RodriguezSilerio.html", "_self");        
+}
+function CampaVillarreal() {
+    window.open("pases/CampaVillarreal.html", "_self");        
+}
+function DeLaParraZamudio3() {
+    window.open("pases/DeLaParraZamudio3.html", "_self");        
+}
+function FiscalAyala() {
+    window.open("pases/FiscalAyala.html", "_self");        
+}
+function MorenoSalas() {
+    window.open("pases/MorenoSalas.html", "_self");        
+}
+
+function ArrietaRodriguez() {
+    window.open("pases/ArrietaRodriguez.html", "_self");        
+}
+function MariaNeliBrecedaPulgarin() {
+    window.open("pases/MariaNeliBrecedaPulgarin.html", "_self");        
+}
+function VargasTapia() {
+    window.open("pases/VargasTapia.html", "_self");        
+}
+
+function sinNombre() {
+    window.open("inicio.html", "_self");        
+}
+
+
+
+
+ function copiarOviedoNajera(){
   var origen = document.getElementById('target1');
   var destino = document.getElementById('target10');
   var copyFrom = document.createElement("textarea");
@@ -502,7 +704,7 @@ function personas9() {
   destino.focus();
   document.execCommand('paste');
 }
- function copiar2(){
+ function copiarHernandezGomez(){
   var origen = document.getElementById('target2');
   var destino = document.getElementById('target10');
   var copyFrom = document.createElement("textarea");
@@ -516,7 +718,7 @@ function personas9() {
   destino.focus();
   document.execCommand('paste');
 }
- function copiar3(){
+ function copiarSantanaHernandez(){
   var origen = document.getElementById('target3');
   var destino = document.getElementById('target10');
   var copyFrom = document.createElement("textarea");
@@ -530,7 +732,7 @@ function personas9() {
   destino.focus();
   document.execCommand('paste');
 }
- function copiar4(){
+ function copiarValenzuelaHernandez(){
   var origen = document.getElementById('target4');
   var destino = document.getElementById('target10');
   var copyFrom = document.createElement("textarea");
@@ -544,7 +746,7 @@ function personas9() {
   destino.focus();
   document.execCommand('paste');
 }
- function copiar5(){
+ function copiarHernandezValles(){
   var origen = document.getElementById('target5');
   var destino = document.getElementById('target10');
   var copyFrom = document.createElement("textarea");
@@ -558,7 +760,7 @@ function personas9() {
   destino.focus();
   document.execCommand('paste');
 }
- function copiar6(){
+ function copiarAguilarParedes(){
   var origen = document.getElementById('target6');
   var destino = document.getElementById('target10');
   var copyFrom = document.createElement("textarea");
@@ -572,7 +774,7 @@ function personas9() {
   destino.focus();
   document.execCommand('paste');
 }
- function copiar7(){
+ function copiarParedesSaucedo(){
   var origen = document.getElementById('target7');
   var destino = document.getElementById('target10');
   var copyFrom = document.createElement("textarea");
@@ -586,7 +788,7 @@ function personas9() {
   destino.focus();
   document.execCommand('paste');
 }
- function copiar8(){
+ function copiarArceOntiveros(){
   var origen = document.getElementById('target8');
   var destino = document.getElementById('target10');
   var copyFrom = document.createElement("textarea");
@@ -600,7 +802,7 @@ function personas9() {
   destino.focus();
   document.execCommand('paste');
 }
- function copiar9(){
+ function copiarQuinterosOntiveros(){
   var origen = document.getElementById('target9');
   var destino = document.getElementById('target10');
   var copyFrom = document.createElement("textarea");
@@ -614,3 +816,786 @@ function personas9() {
   destino.focus();
   document.execCommand('paste');
 }
+
+ function copiarCarrascoHernandez(){
+  var origen = document.getElementById('target10');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarEscobedoNevarez(){
+  var origen = document.getElementById('target11');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarEnriqueDiaz(){
+  var origen = document.getElementById('target12');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarLozanoHernandez(){
+  var origen = document.getElementById('target13');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarHernandezPerez(){
+  var origen = document.getElementById('target14');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarNevarezReyes(){
+  var origen = document.getElementById('target15');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarGonzalezBailon(){
+  var origen = document.getElementById('target16');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarBailonPanuco(){
+  var origen = document.getElementById('target17');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarGarciaHernandez(){
+  var origen = document.getElementById('target18');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+
+
+function copiarCastroBeltran(){
+  var origen = document.getElementById('target19');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarRosalesEstrada(){
+  var origen = document.getElementById('target20');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarAndradeArroyo(){
+  var origen = document.getElementById('target21');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarSanchezCordova(){
+  var origen = document.getElementById('target22');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarArroyoPinedo(){
+  var origen = document.getElementById('target23');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarArroyoVenegas(){
+  var origen = document.getElementById('target24');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarArroyoGomez(){
+  var origen = document.getElementById('target25');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarMaciasBeltran(){
+  var origen = document.getElementById('target26');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+
+function copiarMoralesTapia(){
+  var origen = document.getElementById('target27');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarArreolaHuerta(){
+  var origen = document.getElementById('target28');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarCordovaGuevara(){
+  var origen = document.getElementById('target29');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarGonzalezHernandez(){
+  var origen = document.getElementById('target30');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarGonzalezRojas(){
+  var origen = document.getElementById('target31');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+
+ function copiarGonzalezSoriano(){
+  var origen = document.getElementById('target32');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+function copiarRubioEspino(){
+  var origen = document.getElementById('target33');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+
+function copiarAndradeOrtega(){
+  var origen = document.getElementById('target34');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarValdezHernandez(){
+  var origen = document.getElementById('target35');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarGraciano(){
+  var origen = document.getElementById('target36');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarAndradeTorres(){
+  var origen = document.getElementById('target37');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarJaraAcoltzi(){
+  var origen = document.getElementById('target38');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarHerreraChaires(){
+  var origen = document.getElementById('target39');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarSandraGomez(){
+  var origen = document.getElementById('target40');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarRodriguezChaires(){
+  var origen = document.getElementById('target41');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarChairezLares(){
+  var origen = document.getElementById('target42');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+
+ function copiarChairezAvila(){
+  var origen = document.getElementById('target43');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarAndradeTorres4(){
+  var origen = document.getElementById('target44');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarRuizChaires(){
+  var origen = document.getElementById('target45');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarAcoltziAcevedo(){
+  var origen = document.getElementById('target46');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarAndradeCampos(){
+  var origen = document.getElementById('target47');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarReyesAndrade(){
+  var origen = document.getElementById('target48');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarAndradeTorres3(){
+  var origen = document.getElementById('target49');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarHernandezAndrade(){
+  var origen = document.getElementById('target50');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarAcoltziGarcia(){
+  var origen = document.getElementById('target51');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+
+
+function copiarAcoltziHuerta(){
+  var origen = document.getElementById('target52');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarTorresAlmeida(){
+  var origen = document.getElementById('target53');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarBautistaSalas(){
+  var origen = document.getElementById('target54');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarValdesHuerta(){
+  var origen = document.getElementById('target55');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarRodriguezSilerio(){
+  var origen = document.getElementById('target56');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarCampaVillarreal(){
+  var origen = document.getElementById('target57');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarDeLaParraZamudio3(){
+  var origen = document.getElementById('target58');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ function copiarFiscalAyala(){
+  var origen = document.getElementById('target59');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+
+function copiarMorenoSalas(){
+  var origen = document.getElementById('target60');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+
+function copiarArrietaRodriguez(){
+  var origen = document.getElementById('target62');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+function copiarMariaNeliBrecedaPulgarin(){
+  var origen = document.getElementById('target63');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+function copiarVargasTapia(){
+  var origen = document.getElementById('target64');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+
+function copiarsinNombre(){
+  var origen = document.getElementById('target61');
+  var destino = document.getElementById('target10');
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = origen.value;
+  var body = document.getElementsByTagName('body')[0];
+  body.appendChild(copyFrom);
+  copyFrom.select();
+  document.execCommand('copy');
+  alert("Copiado al portapapeles!");
+  body.removeChild(copyFrom);
+  destino.focus();
+  document.execCommand('paste');
+}
+ 

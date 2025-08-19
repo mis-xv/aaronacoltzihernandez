@@ -82,9 +82,9 @@
         <link rel="alternate" type="application/rss+xml" title=" &raquo; Feed de los comentarios" href="https://mis-xv.github.io/aaronacoltzihernandez/inicio.html/comments/feed/"/>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/demo004.css">
+    <link rel="stylesheet" href="../css/demo004.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="js/scrollreveal.js"></script>
+    <script src="../js/scrollreveal.js"></script>
     <script src="https://kit.fontawesome.com/9b95a5c077.js" crossorigin="anonymous"></script>
     
     <link href="https://fonts.googleapis.com/css2?family=Atma:wght@300&family=Cormorant:wght@300&family=Galada&family=Katibeh&family=Meera+Inimai&family=Pinyon+Script&family=Rouge+Script&family=Waterfall&display=swap" rel="stylesheet">
@@ -243,6 +243,20 @@
   moveToDuration();
 });
 
+$(document).ready(function(){ 
+    $(window).scroll(function(){ 
+        if ($(this).scrollTop() > 100) { 
+            $('#scroll').fadeIn(); 
+        } else { 
+            $('#scroll').fadeOut(); 
+        } 
+    }); 
+    $('#scroll').click(function(){ 
+        $("html, body").animate({ scrollTop: 0 }, 600); 
+        return false; 
+    }); 
+});
+
 </script>
     <title>Aaron Acoltzi | ¡MIS XVS!</title>
     <link rel="shortcut icon" href="img/CODIGO LOGOTIPO.png"/>
@@ -255,7 +269,7 @@
     <h1 class='desactivado col-11 text-center' ><li class='mr-1 far fa-times-circle'></li>DESACTIVADO TEMPORALMENTE<li class='ml-1 far fa-tired'></li>
         </h1> 
 </div>-->
-<body translate="no"  style="background-size: 100% ; background-attachment: scroll; background-repeat: repeat; background-image: url(img/fondo.png); "  >
+<body translate="no"  style="background-size: 100% ; background-attachment: scroll; background-repeat: repeat; background-image: url(../img/fondo.png); "  >
 <!--<div class="loader_bg">
     <div class="loader"><img class="col-12 col-lg-9" src="img/xv.png"></div>
      <div class="progress">
@@ -275,7 +289,7 @@
 
   <div class="" id="player-container">
     
-    <div id="play-pause" class="play" data-audio="musica/musica.mp3">Play</div>
+    <div id="play-pause" class="play" data-audio="../musica/musica.mp3">Play</div>
     <div class="item-inner">
       <div id="time-bar">
         <div id="time-holder">
@@ -323,17 +337,17 @@
     <div class="row justify-content-center" style="background: linear-gradient(to bottom, #8d6b2f, #ecd094); margin: 0 auto;"  >
          <p style="font-size: 20px; color:#1b1a1f"><i class="fas fa-angle-down mt-4 mb-4 flecha"></i> </p>
     </div>
-    <h5 class='dondeyCuando col-12 col-lg-12 mb-0 mt-5 text-center' ><b>APRECIABLE</b></h5> 
+    <h5 class='dondeyCuando col-12 col-lg-12 mb-0 mt-5 text-center' ><b>FAMILIA</b></h5> 
       <div class=" col-12"  >
 
         <div class="container col-10 col-md-7 mb-5 boletos">
             <div class="justify-content-center mb-0"><br>
        
             
-            <h5 class='apellidos col-12 col-lg-12 mt-0 text-center' >Nom del invitado</h5>
-            <h5 class='numeroPerMes col-12 col-lg-12 mt-0 mb-0 text-center text-dark' ><i  class="fas fa-ticket-alt mt-3 mr-2" style="color:#8d6b2f"></i>PERSONAS - 0</h5>
+            <h5 class='apellidos col-12 col-lg-12 mt-0 text-center' >Carrasco Hernández</h5>
+            <h5 class='numeroPerMes col-12 col-lg-12 mt-0 mb-2 text-center text-dark' ><i  class="fas fa-ticket-alt mt-3 mr-2" style="color:#8d6b2f"></i>PERSONAS - 3</h5>
          <hr>
-            <h5 class='numMesa col-12 col-lg-12 mb-2 mt-0 text-center text-dark' ><i id="mesa" class="fas fa-chair mt-0 mr-2" style="color:#8d6b2f"></i>MESA - 0</h5><br>
+            <!--<h5 class='numMesa col-12 col-lg-12 mb-2 mt-0 text-center text-dark' ><i id="mesa" class="fas fa-chair mt-0 mr-2" style="color:#8d6b2f"></i>MESA - 0</h5>--><br>
            
         
         
@@ -351,7 +365,7 @@
     <br>
         <h5 class='porqueformas col-lg-12 mt-4 text-center text-white' >MIS PADRES</h5> 
         <div class="row justify-content-center" style="  margin: 0 auto;"> 
-        <img class="text-center col-7 col-lg-3 mt-0 mb-0 ornamenta" src="img/ornamenta5.png" > 
+        <img class="text-center col-7 col-lg-3 mt-0 mb-0 ornamenta" src="../img/ornamenta5.png" > 
     </div>
         <h6 class='nompadres col-12 col-lg-12 mt-5 text-center' >Susmi Lorena Hernández Gómez</h6>
         <h6 class='and col-12 col-lg-12 text-center'  >&</h6> 
@@ -371,7 +385,7 @@
 
 </div>
 
-<div class="" style="background-size: cover; background-attachment: scroll; background-repeat: no-repeat; background-image: url(img/fondo2.png); "  >
+<div class="" style="background-size: cover; background-attachment: scroll; background-repeat: no-repeat; background-image: url(../img/fondo2.png); "  >
 <h5 class='dondeyCuando2 col-12 col-lg-12 mb-0 mt-0 text-center'style="background: linear-gradient(to right, #8d6b2f, #ecd094); color:transparent; height:35px;">SEPARADOR</h5>
 <h5 class='dondeyCuando col-12 col-lg-12 mt-5 mb-0 text-center'><b>¿DÓNDE?</b></h5>
 
@@ -384,7 +398,7 @@
     <p id="icono" style="font-size: 70px; color:#fff"><i class="fas fa-church"></i></p>
 </div>
           
-            <img class="mt-0" src="img/iglesia.png"  >
+            <img class="mt-0" src="../img/iglesia.png"  >
           
         <div class="text-center align-items-center mr-2 col-md-12 ml-0" style="background-color:#1b1a1f" > 
           <p class="dondeycuandotitulo"   >CEREMONIA RELIGIOSA</p>
@@ -416,7 +430,7 @@
     <p style="font-size: 70px; color:#fff;"><i class="fas fa-glass-cheers"></i></p>  
 
      </div>
-            <img class="mt-0" src="img/salon.png"  >
+            <img class="mt-0" src="../img/salon.png"  >
           
         <div class="text-center align-items-center mr-2 col-md-12 ml-0" style="background-color:#1b1a1f" > 
           <p class="dondeycuandotitulo"   >RECEPCIÓN</p>
@@ -459,15 +473,15 @@
 <div class="col-12" style="background-color:#1b1a1f"  ><br>
      <h5 class='porqueformas col-lg-12 mt-4 text-center text-white' >GALERÍA DE FOTOS</h5> 
  <div class="row justify-content-center" style="  margin: 0 auto;"> 
-        <img class="text-center col-7 col-lg-3 mt-0 mb-0 ornamenta" src="img/ornamenta5.png" > 
+        <img class="text-center col-7 col-lg-3 mt-0 mb-0 ornamenta" src="../img/ornamenta5.png" > 
     </div>
   
         <div class="imagen row justify-content-center mt-5" style="  margin: 0 auto;">
-            <img class="f1 col-6 col-md-3" src="img/1.jpeg" alt="" height="" onclick="openModal();currentSlide(1)" class="hover-shadow">
-            <img class="f2 col-6 col-md-3" src="img/2.jpeg" alt="" onclick="openModal();currentSlide(2)" class="hover-shadow">
+            <img class="f1 col-6 col-md-3" src="../img/1.jpeg" alt="" height="" onclick="openModal();currentSlide(1)" class="hover-shadow">
+            <img class="f2 col-6 col-md-3" src="../img/2.jpeg" alt="" onclick="openModal();currentSlide(2)" class="hover-shadow">
         </div>
       <div class="imagen row justify-content-center mt-3 mb-4" style="  margin: 0 auto;">
-            <img class="f3 col-12 col-md-6" src="img/3.jpeg" alt="" onclick="openModal();currentSlide(3)" class="hover-shadow">
+            <img class="f3 col-12 col-md-6" src="../img/3.jpeg" alt="" onclick="openModal();currentSlide(3)" class="hover-shadow">
             <!--<img class="f4 col-6 col-md-3" src="img/7.jpg" alt="" onclick="openModal();currentSlide(4)" class="hover-shadow">
         </div>
         <div class="imagen row justify-content-center mt-3 " style="  margin: 0 auto;">
@@ -480,7 +494,7 @@
         </div><br>
          <h5 class='porqueformas col-lg-12 mt-5 text-center text-white' >MIS PADRINOS</h5> 
         <div class="row justify-content-center" style="  margin: 0 auto;"> 
-        <img class="text-center col-7 col-lg-3 mt-0 mb-0 ornamenta" src="img/ornamenta5.png" > 
+        <img class="text-center col-7 col-lg-3 mt-0 mb-0 ornamenta" src="../img/ornamenta5.png" > 
     </div> 
         <h6 class='nompadres col-12 col-lg-12 mt-5 text-center' >Karla Yadira Hernández Gómez</h6>
         <h6 class='and col-12 col-lg-12 text-center'  >&</h6> 
@@ -497,17 +511,17 @@
 
     <div class="mySlides">
       <div class="numbertext">1 / 3</div>
-      <img src="img/1.jpeg" style="width:100%">
+      <img src="../img/1.jpeg" style="width:100%">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">2 / 3</div>
-      <img src="img/2.jpeg" style="width:100%">
+      <img src="../img/2.jpeg" style="width:100%">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">3 / 3</div>
-      <img src="img/3.jpeg" style="width:100%">
+      <img src="../img/3.jpeg" style="width:100%">
     </div>
     <!--<div class="mySlides">
       <div class="numbertext">4 / 8</div>
@@ -559,13 +573,13 @@
              <p style=" font-family: 'Josefin Sans', sans-serif;color:#fff; font-size: 20px; letter-spacing: 4px;">DRESS CODE</p>
         <div class="row justify-content-center" > 
            <div class="col-5 justify-content-center ml-2">
-        <img class="col-md-8 mt-4  ml-md-5 mujeres" src="img/vestido2.png" > 
+        <img class="col-md-8 mt-4  ml-md-5 mujeres" src="../img/vestido2.png" > 
         <h5 class='mujeres col-12 col-lg-12 mt-3 text-center text-white'>MUJERES</h5> 
         <h5 class='mujeres col-12 col-lg-12  mb-4 text-center ' style="color:#8d6b2f;  font-family: 'Josefin Sans', sans-serif;"  >Formal</h5>
         </div>  
 
          <div class="col-5 justify-content-center " >
-        <img class="col-md-8 mt-4  ml-md-5 hombres" src="img/traje2.png" > 
+        <img class="col-md-8 mt-4  ml-md-5 hombres" src="../img/traje2.png" > 
         <h5 class='hombres col-12 col-lg-12 mt-3 text-center text-white mr-5'>HOMBRES</h5> 
         <h5 class='hombres col-12 col-lg-12  mb-4  text-center ' style="color:#8d6b2f;  font-family: 'Josefin Sans', sans-serif;"  >Formal</h5>
         </div>   
@@ -702,7 +716,7 @@
 </div>
   <div class="row justify-content-center" style="background-color: white">
                   
-                <img class="col-8 col-lg-3 mb-3 mt-4" src="img/logotipoConCodigo.png">  
+                <img class="col-8 col-lg-3 mb-3 mt-4" src="../img/logotipoConCodigo.png">  
         </div> 
         <a href="javascript:void(0);" id="scroll" title="Scroll to Top" style="display: none;">Top<span></span></a>
 </a> 
@@ -828,12 +842,12 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-    <script src="js/demo004.js"></script>
+    <script src="../js/demo004.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="js/simplyCountdown.min.js"></script>
-    <script src="js/countdown.js"></script>
+    <script src="../js/simplyCountdown.min.js"></script>
+    <script src="../js/countdown.js"></script>
   <script src="//maps.googleapis.com/maps/api/js"></script>
-  <script src="js/script.js"></script>
+  <script src="../js/script.js"></script>
 
    <script>
 
