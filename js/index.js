@@ -673,8 +673,8 @@ function MorenoSalas() {
     window.open("pases/MorenoSalas.html", "_self");        
 }
 
-function ArrietaRodriguez() {
-    window.open("pases/ArrietaRodriguez.html", "_self");        
+function GomezEsquivel() {
+    window.open("pases/GomezEsquivel.html", "_self");        
 }
 function MariaNeliBrecedaPulgarin() {
     window.open("pases/MariaNeliBrecedaPulgarin.html", "_self");        
@@ -1541,7 +1541,7 @@ function copiarMorenoSalas(){
   document.execCommand('paste');
 }
 
-function copiarArrietaRodriguez(){
+function copiarGomezEsquivel(){
   var origen = document.getElementById('target62');
   var destino = document.getElementById('target10');
   var copyFrom = document.createElement("textarea");
